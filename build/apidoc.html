@@ -1,0 +1,2078 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/simov/express-admin"
+
+    >express-admin (v1.2.8)</a>
+</h1>
+<h4>MySql, MariaDB, SQLite and PostgreSQL database admin built with Express and Bootstrap</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin">module express-admin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.init">
+            function <span class="apidocSignatureSpan">express-admin.</span>init
+            <span class="apidocSignatureSpan">(config, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initCommandLine">
+            function <span class="apidocSignatureSpan">express-admin.</span>initCommandLine
+            <span class="apidocSignatureSpan">(args, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initDatabase">
+            function <span class="apidocSignatureSpan">express-admin.</span>initDatabase
+            <span class="apidocSignatureSpan">(args, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initServer">
+            function <span class="apidocSignatureSpan">express-admin.</span>initServer
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initSettings">
+            function <span class="apidocSignatureSpan">express-admin.</span>initSettings
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>404</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>app</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>auth</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>editview</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>listview</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>login</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>mainview</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-admin.</span>render</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.404">module express-admin.404</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.404.get">
+            function <span class="apidocSignatureSpan">express-admin.404.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.app">module express-admin.app</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.app.init">
+            function <span class="apidocSignatureSpan">express-admin.app.</span>init
+            <span class="apidocSignatureSpan">(config, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.app.initCommandLine">
+            function <span class="apidocSignatureSpan">express-admin.app.</span>initCommandLine
+            <span class="apidocSignatureSpan">(args, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.app.initDatabase">
+            function <span class="apidocSignatureSpan">express-admin.app.</span>initDatabase
+            <span class="apidocSignatureSpan">(args, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.app.initServer">
+            function <span class="apidocSignatureSpan">express-admin.app.</span>initServer
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.app.initSettings">
+            function <span class="apidocSignatureSpan">express-admin.app.</span>initSettings
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.auth">module express-admin.auth</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.auth.login">
+            function <span class="apidocSignatureSpan">express-admin.auth.</span>login
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.auth.logout">
+            function <span class="apidocSignatureSpan">express-admin.auth.</span>logout
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.auth.restrict">
+            function <span class="apidocSignatureSpan">express-admin.auth.</span>restrict
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.auth.status">
+            function <span class="apidocSignatureSpan">express-admin.auth.</span>status
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.editview">module express-admin.editview</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.editview.get">
+            function <span class="apidocSignatureSpan">express-admin.editview.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.editview.post">
+            function <span class="apidocSignatureSpan">express-admin.editview.</span>post
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.init">module express-admin.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.init.init">
+            function <span class="apidocSignatureSpan">express-admin.</span>init
+            <span class="apidocSignatureSpan">(config, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.initCommandLine">module express-admin.initCommandLine</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initCommandLine.initCommandLine">
+            function <span class="apidocSignatureSpan">express-admin.</span>initCommandLine
+            <span class="apidocSignatureSpan">(args, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.initDatabase">module express-admin.initDatabase</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initDatabase.initDatabase">
+            function <span class="apidocSignatureSpan">express-admin.</span>initDatabase
+            <span class="apidocSignatureSpan">(args, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.initServer">module express-admin.initServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initServer.initServer">
+            function <span class="apidocSignatureSpan">express-admin.</span>initServer
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.initSettings">module express-admin.initSettings</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.initSettings.initSettings">
+            function <span class="apidocSignatureSpan">express-admin.</span>initSettings
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.listview">module express-admin.listview</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.listview.get">
+            function <span class="apidocSignatureSpan">express-admin.listview.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.listview.post">
+            function <span class="apidocSignatureSpan">express-admin.listview.</span>post
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.login">module express-admin.login</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.login.get">
+            function <span class="apidocSignatureSpan">express-admin.login.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.mainview">module express-admin.mainview</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.mainview.get">
+            function <span class="apidocSignatureSpan">express-admin.mainview.</span>get
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-admin.render">module express-admin.render</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-admin.render.admin">
+            function <span class="apidocSignatureSpan">express-admin.render.</span>admin
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin" id="apidoc.module.express-admin">module express-admin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.init" id="apidoc.element.express-admin.init">
+        function <span class="apidocSignatureSpan">express-admin.</span>init
+        <span class="apidocSignatureSpan">(config, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+	var _routes = routes.<span class="apidocCodeKeywordSpan">init</span>(args.settings, args.custom);
+
+	// register custom apps
+	(function () {
+		var have = false;
+		for (var key in args.custom) {
+			var _app = args.custom[key].app;
+			if (_app &#x26;&#x26; _app.path &#x26;&#x26; fs.existsSync(_app.path)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initCommandLine" id="apidoc.element.express-admin.initCommandLine">
+        function <span class="apidocSignatureSpan">express-admin.</span>initCommandLine
+        <span class="apidocSignatureSpan">(args, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initCommandLine(args, cb) {
+	if (!fs.existsSync(args.dpath)) {
+		console.log(&#x27;Config directory path doesn\&#x27;t exists!&#x27;.red);
+		process.exit();
+	}
+	if (project.exists(args.dpath)) return cb();
+	// else
+	cli.promptForData(function (err, data) {
+		if (err) return cb(err);
+		project.create(args.dpath, data, cb);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initDatabase" id="apidoc.element.express-admin.initDatabase">
+        function <span class="apidocSignatureSpan">express-admin.</span>initDatabase
+        <span class="apidocSignatureSpan">(args, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initDatabase(args, done) {
+	try {
+		var client = new Client(args.config);
+	} catch (err) {
+		return done(err);
+	}
+
+	async.series([
+		function (done) {
+			var options = args.config.mysql||args.config.pg||args.config.sqlite;
+			client.connect(options, function (err) {
+				if (err) return done(err);
+				var x = new Xsql({
+					dialect: client.name,
+					schema: client.config.schema});
+				if (&#x27;function&#x27;===typeof qb) qb = qb(x);
+				done();
+			});
+		},
+		function (done) {
+			var sql = qb.partials.tables(client.config.schema);
+			client.query(sql, function (err, rows) {
+				if (err) return done(err);
+				if (!rows.length) return done(new Error(&#x27;Empty schema!&#x27;));
+				done();
+			});
+		},
+		function (done) {
+			schema.getData(client, function (err, data) {
+				if (err) return done(err);
+				// write back the settings
+				var fpath = path.join(args.dpath, &#x27;settings.json&#x27;),
+					updated = settings.refresh(args.settings, data);
+				fs.writeFileSync(fpath, JSON.stringify(updated, null, 4), &#x27;utf8&#x27;);
+
+				args.settings = updated;
+				done();
+			});
+		}
+	], function (err) {
+		if (err) return done(err);
+		args.db = {client:client};
+		done();
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports = module.exports = {
+	initCommandLine: initCommandLine,
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.<span class="apidocCodeKeywordSpan">initDatabase</span>(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initServer" id="apidoc.element.express-admin.initServer">
+        function <span class="apidocSignatureSpan">express-admin.</span>initServer
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initServer(args) {
+	var r = require(&#x27;./routes&#x27;);
+
+	// general settings
+	var app = express()
+		.set(&#x27;views&#x27;, path.resolve(__dirname, &#x27;./views&#x27;))
+		.set(&#x27;view engine&#x27;, &#x27;html&#x27;)
+		.engine(&#x27;html&#x27;, consolidate.hogan)
+
+		.use(logger(&#x27;dev&#x27;))
+		.use(bodyParser.json())
+		.use(bodyParser.urlencoded({extended: true}))
+		.use(multipart())
+
+		.use(cookieParser())
+		.use(args.session || session({name: &#x27;express-admin&#x27;, secret: &#x27;very secret - required&#x27;,
+						saveUninitialized: true, resave: true}))
+		.use(r.auth.status)// session middleware
+		.use(csrf())
+
+		.use(methodOverride())
+		.use(serveStatic(path.join(__dirname, &#x27;public&#x27;)))
+		.use(serveStatic((function () {
+			var dpath = path.resolve(__dirname, &#x27;node_modules/express-admin-static&#x27;);
+			if (!fs.existsSync(dpath)) {
+				dpath = path.resolve(__dirname, &#x27;../express-admin-static&#x27;);
+			}
+			return dpath;
+		})()));
+
+	if (!args.debug) app.set(&#x27;view cache&#x27;, true);
+
+	// register custom static local paths
+	for (var key in args.custom) {
+		var assets = args.custom[key].public;
+		if (!assets || !assets.local || !assets.local.path ||
+			!fs.existsSync(assets.local.path)) continue;
+		app.use(serveStatic(assets.local.path));
+	}
+
+	// pass server wide variables
+	app.use(function (req, res, next) {
+		// app data
+		res.locals._admin = args;
+
+		// i18n
+		var lang = req.cookies.lang || &#x27;en&#x27;;
+		res.cookie(&#x27;lang&#x27;, lang, {path: &#x27;/&#x27;, maxAge: 900000000});
+		moment.locale(lang == &#x27;cn&#x27; ? &#x27;zh-cn&#x27; : lang);
+
+		// template vars
+		res.locals.string = args.langs[lang];
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.get(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+	var _routes = routes.init(args.settings, args.custom);
+
+	// register custom apps
+	(function () {
+		var have = false;
+		for (var key in args.custom) {
+			var _app = args.custom[key].app;
+			if (_app &#x26;&#x26; _app.path &#x26;&#x26; fs.existsSync(_app.path)) {
+				var view = require(_app.path);
+				app.use(view);
+				have = true;
+			}
+		}
+		if (have &#x26;&#x26; _routes.custom) app.all(_routes.custom, r.auth.restrict, r.render.admin);
+	}());
+
+	// login/logout
+	app.get(&#x27;/login&#x27;, r.login.get, r.render.admin);
+	app.post(&#x27;/login&#x27;, r.auth.login);
+	app.get(&#x27;/logout&#x27;, r.auth.logout);
+
+	// editview
+	app.get(_routes.editview, r.auth.restrict, r.editview.get, r.render.admin);
+	app.post(_routes.editview, r.auth.restrict, r.editview.post, r.render.admin);
+
+	// listview
+	app.get(_routes.listview, r.auth.restrict, r.listview.get, r.render.admin);
+	app.post(_routes.listview, r.auth.restrict, r.listview.post, r.render.admin);
+
+	// mainview
+	app.get(_routes.mainview, r.auth.restrict, r.mainview.get, r.render.admin);
+
+	// not found
+	app.all(&#x27;*&#x27;, r.auth.restrict, r.notfound.get, r.render.admin);
+
+	return app;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.<span class="apidocCodeKeywordSpan">initServer</span>(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initSettings" id="apidoc.element.express-admin.initSettings">
+        function <span class="apidocSignatureSpan">express-admin.</span>initSettings
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initSettings(args) {
+	// route variables
+
+	// upload
+	var upload = args.config.app.upload || path.join(__dirname, &#x27;public/upload&#x27;);
+	args.config.app.upload = upload;
+	if (!fs.existsSync(upload)) fs.mkdirSync(upload);
+
+	// languages
+	args.langs = (function () {
+		var dpath = path.join(__dirname, &#x27;config/lang&#x27;),
+			files = fs.readdirSync(dpath),
+			langs = {};
+		for (var i=0; i &#x3c; files.length; i++) {
+			var name = files[i].replace(path.extname(files[i]), &#x27;&#x27;);
+			langs[name] = require(path.join(dpath, files[i]));
+		}
+		return langs;
+	}());
+
+	// slug to table map
+	args.slugs = (function () {
+		var slugs = {};
+		for (var key in args.settings) {
+			slugs[args.settings[key].slug] = key;
+		}
+		return slugs;
+	}());
+
+	// debug
+	args.debug = args.config.app.debug || (cli.dev ? true : false);
+	// if (!args.debug) console.warn = function(){};
+	// log
+	args.log = args.config.app.log || (cli.log ? true : false);
+
+	// events
+	for (var key in args.custom) {
+		var fpath = args.custom[key].events;
+		if (fpath) break;
+	}
+	var events = fpath ? require(fpath) : {};
+	if (!events.hasOwnProperty(&#x27;preSave&#x27;))
+		events.preSave = function (req, res, args, next) {next()};
+	if (!events.hasOwnProperty(&#x27;postSave&#x27;))
+		events.postSave = function (req, res, args, next) {next()};
+	if (!events.hasOwnProperty(&#x27;preList&#x27;))
+		events.preList = function (req, res, args, next) {next()};
+	args.events = events;
+
+
+	// template variables
+
+	// root
+	if (args.config.app.root) {
+		var root = args.config.app.root;
+		if (/.*\/$/.test(root)) args.config.app.root = root.slice(0,-1);
+	} else {
+		args.config.app.root = &#x27;&#x27;;
+	}
+
+	// layouts/themes/languages
+	args.layouts = args.config.app.layouts;
+	args.themes = args.config.app.themes
+		? {theme: require(path.join(__dirname, &#x27;config/themes&#x27;))} : null;
+
+	args.languages = (function () {
+		if (!args.config.app.languages) return null;
+		var langs = [];
+		for (var key in args.langs) {
+			langs.push({key: key, name: args.langs[key].name});
+		}
+		return {language: langs};
+	}());
+
+	// static
+	args.libs = require(path.join(__dirname, &#x27;config/libs&#x27;));
+	args.libs.external = {css: [], js: []};
+	for (var key in args.custom) {
+		var assets = args.custom[key].public;
+		if (!assets) continue;
+		if (assets.local) {
+			args.libs.js = args.libs.js.concat(assets.local.js||[]);
+			args.libs.css = args.libs.css.concat(assets.local.css||[]);
+		}
+		if (assets.external) {
+			args.libs.external.js = args.libs.external.js.concat(assets.external.js||[]);
+			args.libs.external.css = args.libs.external.css.concat(assets.external.css||[]);
+		}
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	initCommandLine: initCommandLine,
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.<span class="apidocCodeKeywordSpan">initSettings</span>(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.404" id="apidoc.module.express-admin.404">module express-admin.404</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.404.get" id="apidoc.element.express-admin.404.get">
+        function <span class="apidocSignatureSpan">express-admin.404.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	res.locals.partials = {
+		content: &#x27;404&#x27;
+	};
+
+	next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.<span class="apidocCodeKeywordSpan">get</span>(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.app" id="apidoc.module.express-admin.app">module express-admin.app</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.app.init" id="apidoc.element.express-admin.app.init">
+        function <span class="apidocSignatureSpan">express-admin.app.</span>init
+        <span class="apidocSignatureSpan">(config, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+	var _routes = routes.<span class="apidocCodeKeywordSpan">init</span>(args.settings, args.custom);
+
+	// register custom apps
+	(function () {
+		var have = false;
+		for (var key in args.custom) {
+			var _app = args.custom[key].app;
+			if (_app &#x26;&#x26; _app.path &#x26;&#x26; fs.existsSync(_app.path)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.app.initCommandLine" id="apidoc.element.express-admin.app.initCommandLine">
+        function <span class="apidocSignatureSpan">express-admin.app.</span>initCommandLine
+        <span class="apidocSignatureSpan">(args, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initCommandLine(args, cb) {
+	if (!fs.existsSync(args.dpath)) {
+		console.log(&#x27;Config directory path doesn\&#x27;t exists!&#x27;.red);
+		process.exit();
+	}
+	if (project.exists(args.dpath)) return cb();
+	// else
+	cli.promptForData(function (err, data) {
+		if (err) return cb(err);
+		project.create(args.dpath, data, cb);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.app.initDatabase" id="apidoc.element.express-admin.app.initDatabase">
+        function <span class="apidocSignatureSpan">express-admin.app.</span>initDatabase
+        <span class="apidocSignatureSpan">(args, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initDatabase(args, done) {
+	try {
+		var client = new Client(args.config);
+	} catch (err) {
+		return done(err);
+	}
+
+	async.series([
+		function (done) {
+			var options = args.config.mysql||args.config.pg||args.config.sqlite;
+			client.connect(options, function (err) {
+				if (err) return done(err);
+				var x = new Xsql({
+					dialect: client.name,
+					schema: client.config.schema});
+				if (&#x27;function&#x27;===typeof qb) qb = qb(x);
+				done();
+			});
+		},
+		function (done) {
+			var sql = qb.partials.tables(client.config.schema);
+			client.query(sql, function (err, rows) {
+				if (err) return done(err);
+				if (!rows.length) return done(new Error(&#x27;Empty schema!&#x27;));
+				done();
+			});
+		},
+		function (done) {
+			schema.getData(client, function (err, data) {
+				if (err) return done(err);
+				// write back the settings
+				var fpath = path.join(args.dpath, &#x27;settings.json&#x27;),
+					updated = settings.refresh(args.settings, data);
+				fs.writeFileSync(fpath, JSON.stringify(updated, null, 4), &#x27;utf8&#x27;);
+
+				args.settings = updated;
+				done();
+			});
+		}
+	], function (err) {
+		if (err) return done(err);
+		args.db = {client:client};
+		done();
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports = module.exports = {
+	initCommandLine: initCommandLine,
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.<span class="apidocCodeKeywordSpan">initDatabase</span>(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.app.initServer" id="apidoc.element.express-admin.app.initServer">
+        function <span class="apidocSignatureSpan">express-admin.app.</span>initServer
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initServer(args) {
+	var r = require(&#x27;./routes&#x27;);
+
+	// general settings
+	var app = express()
+		.set(&#x27;views&#x27;, path.resolve(__dirname, &#x27;./views&#x27;))
+		.set(&#x27;view engine&#x27;, &#x27;html&#x27;)
+		.engine(&#x27;html&#x27;, consolidate.hogan)
+
+		.use(logger(&#x27;dev&#x27;))
+		.use(bodyParser.json())
+		.use(bodyParser.urlencoded({extended: true}))
+		.use(multipart())
+
+		.use(cookieParser())
+		.use(args.session || session({name: &#x27;express-admin&#x27;, secret: &#x27;very secret - required&#x27;,
+						saveUninitialized: true, resave: true}))
+		.use(r.auth.status)// session middleware
+		.use(csrf())
+
+		.use(methodOverride())
+		.use(serveStatic(path.join(__dirname, &#x27;public&#x27;)))
+		.use(serveStatic((function () {
+			var dpath = path.resolve(__dirname, &#x27;node_modules/express-admin-static&#x27;);
+			if (!fs.existsSync(dpath)) {
+				dpath = path.resolve(__dirname, &#x27;../express-admin-static&#x27;);
+			}
+			return dpath;
+		})()));
+
+	if (!args.debug) app.set(&#x27;view cache&#x27;, true);
+
+	// register custom static local paths
+	for (var key in args.custom) {
+		var assets = args.custom[key].public;
+		if (!assets || !assets.local || !assets.local.path ||
+			!fs.existsSync(assets.local.path)) continue;
+		app.use(serveStatic(assets.local.path));
+	}
+
+	// pass server wide variables
+	app.use(function (req, res, next) {
+		// app data
+		res.locals._admin = args;
+
+		// i18n
+		var lang = req.cookies.lang || &#x27;en&#x27;;
+		res.cookie(&#x27;lang&#x27;, lang, {path: &#x27;/&#x27;, maxAge: 900000000});
+		moment.locale(lang == &#x27;cn&#x27; ? &#x27;zh-cn&#x27; : lang);
+
+		// template vars
+		res.locals.string = args.langs[lang];
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.get(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+	var _routes = routes.init(args.settings, args.custom);
+
+	// register custom apps
+	(function () {
+		var have = false;
+		for (var key in args.custom) {
+			var _app = args.custom[key].app;
+			if (_app &#x26;&#x26; _app.path &#x26;&#x26; fs.existsSync(_app.path)) {
+				var view = require(_app.path);
+				app.use(view);
+				have = true;
+			}
+		}
+		if (have &#x26;&#x26; _routes.custom) app.all(_routes.custom, r.auth.restrict, r.render.admin);
+	}());
+
+	// login/logout
+	app.get(&#x27;/login&#x27;, r.login.get, r.render.admin);
+	app.post(&#x27;/login&#x27;, r.auth.login);
+	app.get(&#x27;/logout&#x27;, r.auth.logout);
+
+	// editview
+	app.get(_routes.editview, r.auth.restrict, r.editview.get, r.render.admin);
+	app.post(_routes.editview, r.auth.restrict, r.editview.post, r.render.admin);
+
+	// listview
+	app.get(_routes.listview, r.auth.restrict, r.listview.get, r.render.admin);
+	app.post(_routes.listview, r.auth.restrict, r.listview.post, r.render.admin);
+
+	// mainview
+	app.get(_routes.mainview, r.auth.restrict, r.mainview.get, r.render.admin);
+
+	// not found
+	app.all(&#x27;*&#x27;, r.auth.restrict, r.notfound.get, r.render.admin);
+
+	return app;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.<span class="apidocCodeKeywordSpan">initServer</span>(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.app.initSettings" id="apidoc.element.express-admin.app.initSettings">
+        function <span class="apidocSignatureSpan">express-admin.app.</span>initSettings
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initSettings(args) {
+	// route variables
+
+	// upload
+	var upload = args.config.app.upload || path.join(__dirname, &#x27;public/upload&#x27;);
+	args.config.app.upload = upload;
+	if (!fs.existsSync(upload)) fs.mkdirSync(upload);
+
+	// languages
+	args.langs = (function () {
+		var dpath = path.join(__dirname, &#x27;config/lang&#x27;),
+			files = fs.readdirSync(dpath),
+			langs = {};
+		for (var i=0; i &#x3c; files.length; i++) {
+			var name = files[i].replace(path.extname(files[i]), &#x27;&#x27;);
+			langs[name] = require(path.join(dpath, files[i]));
+		}
+		return langs;
+	}());
+
+	// slug to table map
+	args.slugs = (function () {
+		var slugs = {};
+		for (var key in args.settings) {
+			slugs[args.settings[key].slug] = key;
+		}
+		return slugs;
+	}());
+
+	// debug
+	args.debug = args.config.app.debug || (cli.dev ? true : false);
+	// if (!args.debug) console.warn = function(){};
+	// log
+	args.log = args.config.app.log || (cli.log ? true : false);
+
+	// events
+	for (var key in args.custom) {
+		var fpath = args.custom[key].events;
+		if (fpath) break;
+	}
+	var events = fpath ? require(fpath) : {};
+	if (!events.hasOwnProperty(&#x27;preSave&#x27;))
+		events.preSave = function (req, res, args, next) {next()};
+	if (!events.hasOwnProperty(&#x27;postSave&#x27;))
+		events.postSave = function (req, res, args, next) {next()};
+	if (!events.hasOwnProperty(&#x27;preList&#x27;))
+		events.preList = function (req, res, args, next) {next()};
+	args.events = events;
+
+
+	// template variables
+
+	// root
+	if (args.config.app.root) {
+		var root = args.config.app.root;
+		if (/.*\/$/.test(root)) args.config.app.root = root.slice(0,-1);
+	} else {
+		args.config.app.root = &#x27;&#x27;;
+	}
+
+	// layouts/themes/languages
+	args.layouts = args.config.app.layouts;
+	args.themes = args.config.app.themes
+		? {theme: require(path.join(__dirname, &#x27;config/themes&#x27;))} : null;
+
+	args.languages = (function () {
+		if (!args.config.app.languages) return null;
+		var langs = [];
+		for (var key in args.langs) {
+			langs.push({key: key, name: args.langs[key].name});
+		}
+		return {language: langs};
+	}());
+
+	// static
+	args.libs = require(path.join(__dirname, &#x27;config/libs&#x27;));
+	args.libs.external = {css: [], js: []};
+	for (var key in args.custom) {
+		var assets = args.custom[key].public;
+		if (!assets) continue;
+		if (assets.local) {
+			args.libs.js = args.libs.js.concat(assets.local.js||[]);
+			args.libs.css = args.libs.css.concat(assets.local.css||[]);
+		}
+		if (assets.external) {
+			args.libs.external.js = args.libs.external.js.concat(assets.external.js||[]);
+			args.libs.external.css = args.libs.external.css.concat(assets.external.css||[]);
+		}
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	initCommandLine: initCommandLine,
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.<span class="apidocCodeKeywordSpan">initSettings</span>(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.auth" id="apidoc.module.express-admin.auth">module express-admin.auth</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.auth.login" id="apidoc.element.express-admin.auth.login">
+        function <span class="apidocSignatureSpan">express-admin.auth.</span>login
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">login = function (req, res) {
+	// query the db for the given username
+	var user = res.locals._admin.users[req.body.username];
+	if (!user) {
+		req.session.error = res.locals.string[&#x27;find-user&#x27;];
+		req.session.username = req.body.username;
+		res.redirect(res.locals.root+&#x27;/login&#x27;);
+		return;
+	}
+
+	// apply the same algorithm to the POSTed password, applying
+	// the hash against the pass / salt, if there is a match we
+	// found the user
+	pwd.hash(req.body.password, user.salt, function (err, hash) {
+		if (hash !== user.hash) {
+			req.session.error = res.locals.string[&#x27;invalid-password&#x27;];
+			req.session.username = req.body.username;
+			res.redirect(res.locals.root+&#x27;/login&#x27;);
+			return;
+		}
+
+		// Regenerate session when signing in
+		// to prevent fixation
+		req.session.regenerate(function (err) {
+			// Store the user&#x27;s primary key
+			// in the session store to be retrieved,
+			// or in this case the entire user object
+			req.session.user = user;
+			res.redirect(res.locals.root+&#x27;/&#x27;);
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.auth.logout" id="apidoc.element.express-admin.auth.logout">
+        function <span class="apidocSignatureSpan">express-admin.auth.</span>logout
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logout = function (req, res) {
+	// destroy the user&#x27;s session to log them out
+	// will be re-created next request
+	req.session.destroy(function () {
+		// successfully logged out
+		res.redirect(res.locals.root+&#x27;/login&#x27;);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.auth.restrict" id="apidoc.element.express-admin.auth.restrict">
+        function <span class="apidocSignatureSpan">express-admin.auth.</span>restrict
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restrict = function (req, res, next) {
+	if (res.locals._admin.debug) return next();
+
+	if (req.session.user) return next();
+	req.session.error = res.locals.string[&#x27;access-denied&#x27;];
+	res.redirect(res.locals.root+&#x27;/login&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.auth.status" id="apidoc.element.express-admin.auth.status">
+        function <span class="apidocSignatureSpan">express-admin.auth.</span>status
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">status = function (req, res, next) {
+	res.locals.show = {
+		error: req.session.error,
+		success: req.session.success
+	};
+	res.locals.username = req.session.username;
+	delete req.session.error;
+	delete req.session.success;
+	delete req.session.username;
+	next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.editview" id="apidoc.module.express-admin.editview">module express-admin.editview</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.editview.get" id="apidoc.element.express-admin.editview.get">
+        function <span class="apidocSignatureSpan">express-admin.editview.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	var args = getArgs(req, res);
+
+	editview.getTypes(args, function (err, data) {
+		if (err) return next(err);
+		render(req, res, next, data, args);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.<span class="apidocCodeKeywordSpan">get</span>(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.editview.post" id="apidoc.element.express-admin.editview.post">
+        function <span class="apidocSignatureSpan">express-admin.editview.</span>post
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (req, res, next) {
+	var args = getArgs(req, res),
+		events = res.locals._admin.events;
+
+	editview.getTypes(args, function (err, data) {
+		if (err) return next(err);
+
+		var view = req.body.view,
+			table = Object.keys(view)[0];
+
+		if (action(req, &#x27;remove&#x27;)) {
+			// should be based on constraints
+			args.action = &#x27;remove&#x27;;
+
+		} else if ({}.hasOwnProperty.call(view[table].records[0], &#x27;insert&#x27;)) {
+			if (args.error &#x26;&#x26; !args.debug)
+				return render(req, res, next, data, args);
+			args.action = &#x27;insert&#x27;;
+
+		} else {
+			if (args.error &#x26;&#x26; !args.debug)
+				return render(req, res, next, data, args);
+			args.action = &#x27;update&#x27;;
+		}
+
+		async.series([
+			events.preSave.bind(events, req, res, args),
+
+			database.update.bind(database, args),
+
+			events.postSave.bind(events, req, res, args)
+
+		], function (err) {
+			if (err) {
+				req.session.error = err.message;
+				res.redirect(res.locals.root+&#x27;/&#x27;+args.slug+page(req, args));
+				return;
+			}
+
+			req.session.success = true;
+
+			// based on clicked button
+			if (action(req, &#x27;remove&#x27;)) {
+				// the message should be different for delete
+				res.redirect(res.locals.root+&#x27;/&#x27;+args.slug+page(req, args));
+			}
+			else if (action(req, &#x27;save&#x27;)) {
+				res.redirect(res.locals.root+&#x27;/&#x27;+args.slug+page(req, args));
+			}
+			else if (action(req, &#x27;another&#x27;)) {
+				res.redirect(res.locals.root+&#x27;/&#x27;+args.slug+&#x27;/add&#x27;);
+			}
+			else if (action(req, &#x27;continue&#x27;)) {
+				if (args.debug) return render(req, res, next, data, args);
+				res.redirect(res.locals.root+&#x27;/&#x27;+args.slug+&#x27;/&#x27;+args.id.join());
+			}
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			}
+		}
+		if (have &#x26;&#x26; _routes.custom) app.all(_routes.custom, r.auth.restrict, r.render.admin);
+	}());
+
+	// login/logout
+	app.get(&#x27;/login&#x27;, r.login.get, r.render.admin);
+	app.<span class="apidocCodeKeywordSpan">post</span>(&#x27;/login&#x27;, r.auth.login);
+	app.get(&#x27;/logout&#x27;, r.auth.logout);
+
+	// editview
+	app.get(_routes.editview, r.auth.restrict, r.editview.get, r.render.admin);
+	app.post(_routes.editview, r.auth.restrict, r.editview.post, r.render.admin);
+
+	// listview
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.init" id="apidoc.module.express-admin.init">module express-admin.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.init.init" id="apidoc.element.express-admin.init.init">
+        function <span class="apidocSignatureSpan">express-admin.</span>init
+        <span class="apidocSignatureSpan">(config, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+	var _routes = routes.<span class="apidocCodeKeywordSpan">init</span>(args.settings, args.custom);
+
+	// register custom apps
+	(function () {
+		var have = false;
+		for (var key in args.custom) {
+			var _app = args.custom[key].app;
+			if (_app &#x26;&#x26; _app.path &#x26;&#x26; fs.existsSync(_app.path)) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.initCommandLine" id="apidoc.module.express-admin.initCommandLine">module express-admin.initCommandLine</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initCommandLine.initCommandLine" id="apidoc.element.express-admin.initCommandLine.initCommandLine">
+        function <span class="apidocSignatureSpan">express-admin.</span>initCommandLine
+        <span class="apidocSignatureSpan">(args, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initCommandLine(args, cb) {
+	if (!fs.existsSync(args.dpath)) {
+		console.log(&#x27;Config directory path doesn\&#x27;t exists!&#x27;.red);
+		process.exit();
+	}
+	if (project.exists(args.dpath)) return cb();
+	// else
+	cli.promptForData(function (err, data) {
+		if (err) return cb(err);
+		project.create(args.dpath, data, cb);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.initDatabase" id="apidoc.module.express-admin.initDatabase">module express-admin.initDatabase</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initDatabase.initDatabase" id="apidoc.element.express-admin.initDatabase.initDatabase">
+        function <span class="apidocSignatureSpan">express-admin.</span>initDatabase
+        <span class="apidocSignatureSpan">(args, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initDatabase(args, done) {
+	try {
+		var client = new Client(args.config);
+	} catch (err) {
+		return done(err);
+	}
+
+	async.series([
+		function (done) {
+			var options = args.config.mysql||args.config.pg||args.config.sqlite;
+			client.connect(options, function (err) {
+				if (err) return done(err);
+				var x = new Xsql({
+					dialect: client.name,
+					schema: client.config.schema});
+				if (&#x27;function&#x27;===typeof qb) qb = qb(x);
+				done();
+			});
+		},
+		function (done) {
+			var sql = qb.partials.tables(client.config.schema);
+			client.query(sql, function (err, rows) {
+				if (err) return done(err);
+				if (!rows.length) return done(new Error(&#x27;Empty schema!&#x27;));
+				done();
+			});
+		},
+		function (done) {
+			schema.getData(client, function (err, data) {
+				if (err) return done(err);
+				// write back the settings
+				var fpath = path.join(args.dpath, &#x27;settings.json&#x27;),
+					updated = settings.refresh(args.settings, data);
+				fs.writeFileSync(fpath, JSON.stringify(updated, null, 4), &#x27;utf8&#x27;);
+
+				args.settings = updated;
+				done();
+			});
+		}
+	], function (err) {
+		if (err) return done(err);
+		args.db = {client:client};
+		done();
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+exports = module.exports = {
+	initCommandLine: initCommandLine,
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.<span class="apidocCodeKeywordSpan">initDatabase</span>(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.initServer" id="apidoc.module.express-admin.initServer">module express-admin.initServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initServer.initServer" id="apidoc.element.express-admin.initServer.initServer">
+        function <span class="apidocSignatureSpan">express-admin.</span>initServer
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initServer(args) {
+	var r = require(&#x27;./routes&#x27;);
+
+	// general settings
+	var app = express()
+		.set(&#x27;views&#x27;, path.resolve(__dirname, &#x27;./views&#x27;))
+		.set(&#x27;view engine&#x27;, &#x27;html&#x27;)
+		.engine(&#x27;html&#x27;, consolidate.hogan)
+
+		.use(logger(&#x27;dev&#x27;))
+		.use(bodyParser.json())
+		.use(bodyParser.urlencoded({extended: true}))
+		.use(multipart())
+
+		.use(cookieParser())
+		.use(args.session || session({name: &#x27;express-admin&#x27;, secret: &#x27;very secret - required&#x27;,
+						saveUninitialized: true, resave: true}))
+		.use(r.auth.status)// session middleware
+		.use(csrf())
+
+		.use(methodOverride())
+		.use(serveStatic(path.join(__dirname, &#x27;public&#x27;)))
+		.use(serveStatic((function () {
+			var dpath = path.resolve(__dirname, &#x27;node_modules/express-admin-static&#x27;);
+			if (!fs.existsSync(dpath)) {
+				dpath = path.resolve(__dirname, &#x27;../express-admin-static&#x27;);
+			}
+			return dpath;
+		})()));
+
+	if (!args.debug) app.set(&#x27;view cache&#x27;, true);
+
+	// register custom static local paths
+	for (var key in args.custom) {
+		var assets = args.custom[key].public;
+		if (!assets || !assets.local || !assets.local.path ||
+			!fs.existsSync(assets.local.path)) continue;
+		app.use(serveStatic(assets.local.path));
+	}
+
+	// pass server wide variables
+	app.use(function (req, res, next) {
+		// app data
+		res.locals._admin = args;
+
+		// i18n
+		var lang = req.cookies.lang || &#x27;en&#x27;;
+		res.cookie(&#x27;lang&#x27;, lang, {path: &#x27;/&#x27;, maxAge: 900000000});
+		moment.locale(lang == &#x27;cn&#x27; ? &#x27;zh-cn&#x27; : lang);
+
+		// template vars
+		res.locals.string = args.langs[lang];
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.get(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+	var _routes = routes.init(args.settings, args.custom);
+
+	// register custom apps
+	(function () {
+		var have = false;
+		for (var key in args.custom) {
+			var _app = args.custom[key].app;
+			if (_app &#x26;&#x26; _app.path &#x26;&#x26; fs.existsSync(_app.path)) {
+				var view = require(_app.path);
+				app.use(view);
+				have = true;
+			}
+		}
+		if (have &#x26;&#x26; _routes.custom) app.all(_routes.custom, r.auth.restrict, r.render.admin);
+	}());
+
+	// login/logout
+	app.get(&#x27;/login&#x27;, r.login.get, r.render.admin);
+	app.post(&#x27;/login&#x27;, r.auth.login);
+	app.get(&#x27;/logout&#x27;, r.auth.logout);
+
+	// editview
+	app.get(_routes.editview, r.auth.restrict, r.editview.get, r.render.admin);
+	app.post(_routes.editview, r.auth.restrict, r.editview.post, r.render.admin);
+
+	// listview
+	app.get(_routes.listview, r.auth.restrict, r.listview.get, r.render.admin);
+	app.post(_routes.listview, r.auth.restrict, r.listview.post, r.render.admin);
+
+	// mainview
+	app.get(_routes.mainview, r.auth.restrict, r.mainview.get, r.render.admin);
+
+	// not found
+	app.all(&#x27;*&#x27;, r.auth.restrict, r.notfound.get, r.render.admin);
+
+	return app;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.initSettings(config);
+			return done(null, this.<span class="apidocCodeKeywordSpan">initServer</span>(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.initSettings" id="apidoc.module.express-admin.initSettings">module express-admin.initSettings</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.initSettings.initSettings" id="apidoc.element.express-admin.initSettings.initSettings">
+        function <span class="apidocSignatureSpan">express-admin.</span>initSettings
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initSettings(args) {
+	// route variables
+
+	// upload
+	var upload = args.config.app.upload || path.join(__dirname, &#x27;public/upload&#x27;);
+	args.config.app.upload = upload;
+	if (!fs.existsSync(upload)) fs.mkdirSync(upload);
+
+	// languages
+	args.langs = (function () {
+		var dpath = path.join(__dirname, &#x27;config/lang&#x27;),
+			files = fs.readdirSync(dpath),
+			langs = {};
+		for (var i=0; i &#x3c; files.length; i++) {
+			var name = files[i].replace(path.extname(files[i]), &#x27;&#x27;);
+			langs[name] = require(path.join(dpath, files[i]));
+		}
+		return langs;
+	}());
+
+	// slug to table map
+	args.slugs = (function () {
+		var slugs = {};
+		for (var key in args.settings) {
+			slugs[args.settings[key].slug] = key;
+		}
+		return slugs;
+	}());
+
+	// debug
+	args.debug = args.config.app.debug || (cli.dev ? true : false);
+	// if (!args.debug) console.warn = function(){};
+	// log
+	args.log = args.config.app.log || (cli.log ? true : false);
+
+	// events
+	for (var key in args.custom) {
+		var fpath = args.custom[key].events;
+		if (fpath) break;
+	}
+	var events = fpath ? require(fpath) : {};
+	if (!events.hasOwnProperty(&#x27;preSave&#x27;))
+		events.preSave = function (req, res, args, next) {next()};
+	if (!events.hasOwnProperty(&#x27;postSave&#x27;))
+		events.postSave = function (req, res, args, next) {next()};
+	if (!events.hasOwnProperty(&#x27;preList&#x27;))
+		events.preList = function (req, res, args, next) {next()};
+	args.events = events;
+
+
+	// template variables
+
+	// root
+	if (args.config.app.root) {
+		var root = args.config.app.root;
+		if (/.*\/$/.test(root)) args.config.app.root = root.slice(0,-1);
+	} else {
+		args.config.app.root = &#x27;&#x27;;
+	}
+
+	// layouts/themes/languages
+	args.layouts = args.config.app.layouts;
+	args.themes = args.config.app.themes
+		? {theme: require(path.join(__dirname, &#x27;config/themes&#x27;))} : null;
+
+	args.languages = (function () {
+		if (!args.config.app.languages) return null;
+		var langs = [];
+		for (var key in args.langs) {
+			langs.push({key: key, name: args.langs[key].name});
+		}
+		return {language: langs};
+	}());
+
+	// static
+	args.libs = require(path.join(__dirname, &#x27;config/libs&#x27;));
+	args.libs.external = {css: [], js: []};
+	for (var key in args.custom) {
+		var assets = args.custom[key].public;
+		if (!assets) continue;
+		if (assets.local) {
+			args.libs.js = args.libs.js.concat(assets.local.js||[]);
+			args.libs.css = args.libs.css.concat(assets.local.css||[]);
+		}
+		if (assets.external) {
+			args.libs.external.js = args.libs.external.js.concat(assets.external.js||[]);
+			args.libs.external.css = args.libs.external.css.concat(assets.external.css||[]);
+		}
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	initCommandLine: initCommandLine,
+	initDatabase: initDatabase,
+	initSettings: initSettings,
+	initServer: initServer,
+	init: function (config, done) {
+		this.initDatabase(config, function (err) {
+			if (err) return done(err);
+			this.<span class="apidocCodeKeywordSpan">initSettings</span>(config);
+			return done(null, this.initServer(config));
+		}.bind(this));
+	}
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.listview" id="apidoc.module.express-admin.listview">module express-admin.listview</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.listview.get" id="apidoc.element.express-admin.listview.get">
+        function <span class="apidocSignatureSpan">express-admin.listview.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	_data(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.<span class="apidocCodeKeywordSpan">get</span>(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.listview.post" id="apidoc.element.express-admin.listview.post">
+        function <span class="apidocSignatureSpan">express-admin.listview.</span>post
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (req, res, next) {
+	_data(req, res, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			}
+		}
+		if (have &#x26;&#x26; _routes.custom) app.all(_routes.custom, r.auth.restrict, r.render.admin);
+	}());
+
+	// login/logout
+	app.get(&#x27;/login&#x27;, r.login.get, r.render.admin);
+	app.<span class="apidocCodeKeywordSpan">post</span>(&#x27;/login&#x27;, r.auth.login);
+	app.get(&#x27;/logout&#x27;, r.auth.logout);
+
+	// editview
+	app.get(_routes.editview, r.auth.restrict, r.editview.get, r.render.admin);
+	app.post(_routes.editview, r.auth.restrict, r.editview.post, r.render.admin);
+
+	// listview
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.login" id="apidoc.module.express-admin.login">module express-admin.login</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.login.get" id="apidoc.element.express-admin.login.get">
+        function <span class="apidocSignatureSpan">express-admin.login.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	
+	res.locals.partials = {
+		content: &#x27;login&#x27;
+	};
+
+	next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.<span class="apidocCodeKeywordSpan">get</span>(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.mainview" id="apidoc.module.express-admin.mainview">module express-admin.mainview</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.mainview.get" id="apidoc.element.express-admin.mainview.get">
+        function <span class="apidocSignatureSpan">express-admin.mainview.</span>get
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (req, res, next) {
+	var settings = res.locals._admin.settings,
+		custom = res.locals._admin.custom;
+
+	var tables = [];
+	for (var key in settings) {
+		var item = settings[key];
+		if (!item.mainview.show || !item.table.pk || item.table.view) continue;
+		tables.push({slug: item.slug, name: item.table.verbose});
+	}
+
+	var views = [];
+	for (var key in settings) {
+		var item = settings[key];
+		if (!item.mainview.show || !item.table.view) continue;
+		views.push({slug: item.slug, name: item.table.verbose});
+	}
+
+	var customs = [];
+	for (var key in custom) {
+		var item = custom[key].app;
+		if (!item || !item.mainview || !item.mainview.show) continue;
+		customs.push({slug: item.slug, name: item.verbose});
+	}
+
+	res.locals.tables = !tables.length ? null : {items: tables};
+	res.locals.views = !views.length ? null : {items: views};
+	res.locals.custom = !customs.length ? null : {items: customs};
+	
+	res.locals.partials = {
+		content:  &#x27;mainview&#x27;
+	};
+
+	next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		res.locals.root = args.config.app.root;
+		res.locals.libs = args.libs;
+		res.locals.themes = args.themes;
+		res.locals.layouts = args.layouts;
+		res.locals.languages = args.languages;
+
+		// required for custom views
+		res.locals._admin.views = app.<span class="apidocCodeKeywordSpan">get</span>(&#x27;views&#x27;);
+
+		next();
+	});
+
+	// routes
+
+	// init regexes
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-admin.render" id="apidoc.module.express-admin.render">module express-admin.render</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-admin.render.admin" id="apidoc.element.express-admin.render.admin">
+        function <span class="apidocSignatureSpan">express-admin.render.</span>admin
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">admin = function (req, res) {
+	
+	res.locals.partials.header = &#x27;header&#x27;;
+	res.locals.partials.breadcrumbs = &#x27;breadcrumbs&#x27;;
+	res.locals.partials.theme = &#x27;js/theme&#x27;;
+	res.locals.partials.layout = &#x27;js/layout&#x27;;
+
+	res.render(&#x27;base&#x27;, {
+		
+		user: req.session.user,
+		csrf: req.csrfToken(),
+
+		url: {
+			home: &#x27;/&#x27;
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
