@@ -1,6 +1,6 @@
 # npmdoc-express-admin
 
-#### api documentation for  [express-admin (v1.2.8)](https://github.com/simov/express-admin)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-admin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-admin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-admin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-admin)
+#### api documentation for  [express-admin (v1.3.0)](https://github.com/simov/express-admin)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-admin.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-admin) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-admin.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-admin)
 
 #### MySql, MariaDB, SQLite and PostgreSQL database admin built with Express and Bootstrap
 
@@ -65,10 +65,10 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "3bf8382f3f60f6fb8a8292e71b22d9799ae678a1",
-        "tarball": "https://registry.npmjs.org/express-admin/-/express-admin-1.2.8.tgz"
+        "shasum": "6dd76e4496b0c993b3500dd283a4fb9743647f9f",
+        "tarball": "https://registry.npmjs.org/express-admin/-/express-admin-1.3.0.tgz"
     },
-    "gitHead": "63a79ee86c3d5eacdcaba6f9d819022c8917529c",
+    "gitHead": "7b7e898b0d188b6f54b79ac234622f37ec64c228",
     "homepage": "https://github.com/simov/express-admin",
     "keywords": [
         "mysql",
@@ -96,7 +96,7 @@
     "scripts": {
         "test": "make test"
     },
-    "version": "1.2.8"
+    "version": "1.3.0"
 }
 ```
 
